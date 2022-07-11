@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include "main.h"
 /**
  * print_string- Function to print strings
  * @s: string to print
@@ -12,7 +13,7 @@ int print_string(char *s)
 
 	while (s[i] != '\0')
 	{
-		putchar(s[i]);
+		_putchar(s[i]);
 		count++;
 		i++;
 	}
@@ -26,7 +27,7 @@ int print_string(char *s)
  */
 void print_char(char ch)
 {
-	putchar(ch);
+	_putchar(ch);
 }
 
 
@@ -67,7 +68,7 @@ int _printf(const char *format, ...)
 					break;
 
 				case '%':
-					putchar('%');
+					_putchar('%');
 					break;
 			}
 			i++;
@@ -75,7 +76,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			putchar(format[i]);
+			_putchar(format[i]);
 		}
 		i++;
 		count++;

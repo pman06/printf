@@ -1,8 +1,8 @@
 #include "main.h"
-/*
- * print_int- function to print integers out
- * @ls: variadic list
- * Return: count of string printed
+/**
+ * print_int - function to print out int
+ * @ls: list supplied
+ * Return: number of int printed
  */
 int print_int(va_list ls)
 {

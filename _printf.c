@@ -5,30 +5,30 @@
 /**
  * print_func- Function to return function for the
  * function specifier
- * @va_list: variadic lists
+ * @ls: variadic lists
  * @format: string pointer in printf
  * Return: int
  */
-int print_func(va_list ls, const char * format)
+int print_func(va_list ls, const char *format)
 {
 	int b, i, count;
 	char ch;
 
-	prt arr [] = {
+	prt arr[] = {
 		{"s", print_string},
 		{"c", print_char},
 		{"d", print_int},
 		{"i", print_int},
 		{NULL, NULL}
-	};	
+	};
 	count = 0;
 	i = 0;
 	ch = format[i];
-	while(format[i] != '\0')
+	while (format[i] != '\0')
 	{
 		if (ch == '%')
 		{
-			b= 0;
+			b = 0;
 			i++;
 			ch = format[i];
 			while (arr[b].c != NULL && ch != *(arr[b].c))
@@ -65,7 +65,7 @@ int _printf(const char *format, ...)
 
 	if (!format)
 	{
-	 	return (-1);
+		return (-1);
 	}
 	va_start(ls, format);
 	count	+= print_func(ls, format);

@@ -1,13 +1,14 @@
 #include "main.h"
-/*
- * print_string- function to print string out
- * @ls: variadic list
- * Return: count of string printed
+/**
+ * print_string - function to return char
+ * @ls: list given
+ * Return: number of char printed
  */
 int print_string(va_list ls)
 {
 	char *s;
 	int count;
+
 	s = va_arg(ls, char *);
 	if (s == NULL)
 		s = "(null)";

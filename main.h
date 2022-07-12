@@ -4,7 +4,12 @@
 #include <stdlib.h>
 int _printf(const char *format, ...);
 int _putchar(char c);
-typedef struct printers 
+/**
+ * struct printers- struct to determine which function to print
+ * @c: function to print
+ * @f: The printer function
+ */
+typedef struct printers
 {
 	char *c;
 	int (*f)(va_list);
